@@ -1,19 +1,17 @@
 public class Wc{
-	String str;
-	public Wc(String s){
-		str = s;
-	}
 
-	public int getLength(){
+	public int getLength(String str){
 		return str.length();
 	}
 
-	public int getWords(){
+	public int getWords(String str){
+		if(str.length() == 0) return 0;
 		String[] s1 = str.split(" ");
 		return s1.length;
 	}
 
-	public int getLine(){
+	public int getLine(String str){
+		if(str.length() == 0) return 0;
 		String[] s1 = str.split("\r\n");
 		return s1.length;
 	}
