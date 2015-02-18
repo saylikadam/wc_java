@@ -108,10 +108,17 @@ public class WcTest{
 	}
 
 	@Test
-	public void giveParticular_will_give_the_result_of_that_option(){
+	public void giveParticular_will_give_the_result_of_minus_c_option(){
 		String text = "hello, this is a good day.\r\nWhat do you think?\r\n";
 		Wc wc = new Wc();
 		assertEquals(wc.giveParticular(text, "-c"), "48");
+	}
+
+	@Test
+	public void giveParticular_will_give_the_result_of_minus_l_option(){
+		String text = "hello, this is a good day.\r\nWhat do you think?\r\n";
+		Wc wc = new Wc();
+		assertEquals(wc.giveParticular(text, "-l"), "1");
 	}
 
 }
