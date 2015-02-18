@@ -28,12 +28,15 @@ public class Wc{
 	//giving particular result for options
 
 	public String giveParticular(String str,String option){
-		switch(option){
+		if(option != null){
+			switch(option){
 			case "-c" : return ""+getLength(str);
 			case "-l" : return ""+getLine(str);
 			case "-w" : return ""+getWords(str);
+			}	
 		}
 		return getLine(str) + " " + getWords(str) + " " + getLength(str);
 	}
+
 }
 
