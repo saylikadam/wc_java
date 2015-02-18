@@ -1,41 +1,45 @@
 public class Wc{
 
-	public int getChars(String str){
-		return str.length();
+	String text;
+	public Wc(String str){
+		this.text = str;
+	}
+	public int getChars(){
+		return this.text.length();
 	}
 
-	public int getWords(String str){
-		if(str.length() == 0) return 0;
-		int lines = str.split("\r\n").length-1;
-		String[] s1 = str.split(" ");
+	public int getWords(){
+		if(this.text.length() == 0) return 0;
+		int lines = this.text.split("\r\n").length-1;
+		String[] s1 = this.text.split(" ");
 		return s1.length+lines;
 	}
 
-	public int getLine(String str){
-		if(str.length() == 0) return 0;
-		int result = str.split("\r\n").length -1;
+	public int getLine(){
+		if(this.text.length() == 0) return 0;
+		int result = this.text.split("\r\n").length -1;
 		return result;
 	}
 
 //line word character
-	public String finalResult(String str){
-		String output =  ""+getLine(str);
-		output = output +" "+getWords(str);
-		output = output +" "+ getChars(str);
+	public String finalResult(){
+		String output =  ""+getLine();
+		output = output +" "+getWords();
+		output = output +" "+ getChars();
 		return output;
 	}
 
 	//giving particular result for options
 
-	public String isOption(String str,String option){
+	public String isOption(String option){
 		if(option != null){
 			switch(option){
-			case "-c" : return ""+getChars(str);
-			case "-l" : return ""+getLine(str);
-			case "-w" : return ""+getWords(str);
+			case "-c" : return ""+getChars();
+			case "-l" : return ""+getLine();
+			case "-w" : return ""+getWords();
 			}	
 		}
-		return finalResult(str);
+		return finalResult();
 	}
 
 }
