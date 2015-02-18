@@ -3,31 +3,31 @@ import static org.junit.Assert.*;
 
 public class WcTest{
 	@Test
-	public void canGiveLengthOfString(){
+	public void can_give_length_of_string(){
 		String text = "hello";
 		Wc w = new Wc();
 		assertEquals(5,w.getLength(text));
 	}
 
 	@Test
-	public void itCanGiveLengthOfStringWithSpaces(){
+	public void it_can_give_length_of_string_with_spaces(){
 		String text = "India is my country";
 		Wc w = new Wc();
 		assertEquals(19,w.getLength(text));
 	}
 
 	@Test
-	public void canGiveNoOfWordsInAString(){
+	public void can_give_no_of_words_in_a_string(){
 		String text = "India is my country";
 		Wc w = new Wc();
 		assertEquals(4,w.getWords(text));
 	}
 
 	@Test
-	public void canGiveNoOflinesInString(){
+	public void can_give_no_of_lines_in_string(){
 		String text = "India is my country";
 		Wc w = new Wc();
-		assertEquals(1,w.getLine(text));
+		assertEquals(0,w.getLine(text));
 	}
 
 	@Test
@@ -41,14 +41,14 @@ public class WcTest{
 	public void getLines_gives_1_for_string_with_space (){
 	   String text = " ";
 	   Wc wc = new Wc();
-	   assertEquals(1,wc.getLine(text));
+	   assertEquals(0,wc.getLine(text));
 	}
 
 	@Test
 	public void getLines_gives_2_for_two_lines_present_in_a_string (){
-	   String text = "hello, this is a good day.\r\nWhat do you think?\r\n";
+	   String text = "hello, this is a good day. \r\nWhat do you think?\r\n";
 	   Wc wc = new Wc();
-	   assertEquals(2,wc.getLine(text));
+	   assertEquals(1,wc.getLine(text));
 	}
 
 	@Test
@@ -97,6 +97,14 @@ public class WcTest{
 	public void getChars_gives_48_for_hello_How_are_you (){
 	   String text = "hello, this is a good day.\r\nWhat do you think?\r\n";
 	   Wc wc = new Wc();
-	   assertEquals(2,wc.getLine(text));
+	   assertEquals(48,wc.getLength(text));
 	}
+	
+	@Test
+	public void finalResult_will_give_the_words_line_and_character_count(){
+		String text = "hello, this is a good day.\r\nWhat do you think?\r\n";
+		Wc wc = new Wc();
+	    assertEquals("1 10 48",wc.finalResult(text));	
+	}
+
 }
