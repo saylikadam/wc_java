@@ -1,6 +1,6 @@
 public class Wc{
 
-	public int getLength(String str){
+	public int getChars(String str){
 		return str.length();
 	}
 
@@ -21,7 +21,7 @@ public class Wc{
 	public String finalResult(String str){
 		String output =  ""+getLine(str);
 		output = output +" "+getWords(str);
-		output = output +" "+ getLength(str);
+		output = output +" "+ getChars(str);
 		return output;
 	}
 
@@ -30,7 +30,7 @@ public class Wc{
 	public String isOption(String str,String option){
 		if(option != null){
 			switch(option){
-			case "-c" : return ""+getLength(str);
+			case "-c" : return ""+getChars(str);
 			case "-l" : return ""+getLine(str);
 			case "-w" : return ""+getWords(str);
 			}	

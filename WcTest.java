@@ -6,14 +6,14 @@ public class WcTest{
 	public void can_give_length_of_string(){
 		String text = "hello";
 		Wc w = new Wc();
-		assertEquals(5,w.getLength(text));
+		assertEquals(5,w.getChars(text));
 	}
 
 	@Test
 	public void it_can_give_length_of_string_with_spaces(){
 		String text = "India is my country";
 		Wc w = new Wc();
-		assertEquals(19,w.getLength(text));
+		assertEquals(19,w.getChars(text));
 	}
 
 	@Test
@@ -76,28 +76,28 @@ public class WcTest{
 	public void getChars_gives_0_for_empty_string (){
 	   String text = "";
 	   Wc wc = new Wc();
-	   assertEquals(0,wc.getLength(text));
+	   assertEquals(0,wc.getChars(text));
 	}
 
 	@Test
 	public void getChars_gives_5_for_hello (){
 	   String text = "hello";
 	   Wc wc = new Wc();
-	   assertEquals(5,wc.getLength(text));
+	   assertEquals(5,wc.getChars(text));
 	}
 
 	@Test
 	public void getChars_gives_19_for_hello_How_are_you (){
 	   String text = "hello, How are you?";
 	   Wc wc = new Wc();
-	   assertEquals(19,wc.getLength(text));
+	   assertEquals(19,wc.getChars(text));
 	}
 
 	@Test
 	public void getChars_gives_48_for_hello_How_are_you (){
 	   String text = "hello, this is a good day.\r\nWhat do you think?\r\n";
 	   Wc wc = new Wc();
-	   assertEquals(48,wc.getLength(text));
+	   assertEquals(48,wc.getChars(text));
 	}
 	
 	@Test
