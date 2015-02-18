@@ -30,9 +30,9 @@ public class Wc{
 	public String giveParticular(String str,String option){
 		switch(option){
 			case "-c" : return ""+getLength(str);
-			// default: getLine(str)+" "+ getWords(str)+" "+getLength(str);
+			case "-l" : return ""+getLine(str);
+			case "-w" : return ""+getWords(str);
 		}
-
 		return getLine(str) + " " + getWords(str) + " " + getLength(str);
 	}
 }
