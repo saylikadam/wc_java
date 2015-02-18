@@ -108,31 +108,31 @@ public class WcTest{
 	}
 
 	@Test
-	public void giveParticular_will_give_the_result_of_minus_c_option(){
+	public void isOption_will_give_the_result_of_minus_c_option(){
 		String text = "hello, this is a good day.\r\nWhat do you think?\r\n";
 		Wc wc = new Wc();
-		assertEquals(wc.giveParticular(text, "-c"), "48");
+		assertEquals(wc.isOption(text, "-c"), "48");
 	}
 
 	@Test
-	public void giveParticular_will_give_the_result_of_minus_l_option(){
+	public void isOption_will_give_the_result_of_minus_l_option(){
 		String text = "hello, this is a good day.\r\nWhat do you think?\r\n";
 		Wc wc = new Wc();
-		assertEquals(wc.giveParticular(text, "-l"), "1");
+		assertEquals(wc.isOption(text, "-l"), "1");
 	}
 
 	@Test
-	public void giveParticular_will_give_the_result_of_minus_w_option(){
+	public void isOption_will_give_the_result_of_minus_w_option(){
 		String text = "hello, this is a good day.\r\nWhat do you think?\r\n";
 		Wc wc = new Wc();
-		assertEquals(wc.giveParticular(text,"-w"),"10");
+		assertEquals(wc.isOption(text,"-w"),"10");
 	}
 
 	@Test
-	public void giveParticular_will_give_the_result_of_no_any_option(){
+	public void isOption_will_give_the_result_of_no_any_option(){
 		String text = "hello, this is a good day.\r\nWhat do you think?\r\n";
 		Wc wc = new Wc();
-		assertEquals(wc.giveParticular(text," "),"1 10 48");
+		assertEquals(wc.isOption(text," "),"1 10 48");
 	}
 
 }

@@ -27,7 +27,7 @@ public class Wc{
 
 	//giving particular result for options
 
-	public String giveParticular(String str,String option){
+	public String isOption(String str,String option){
 		if(option != null){
 			switch(option){
 			case "-c" : return ""+getLength(str);
@@ -35,7 +35,7 @@ public class Wc{
 			case "-w" : return ""+getWords(str);
 			}	
 		}
-		return getLine(str) + " " + getWords(str) + " " + getLength(str);
+		return finalResult(str);
 	}
 
 }
