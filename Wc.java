@@ -24,5 +24,16 @@ public class Wc{
 		output = output +" "+ getLength(str);
 		return output;
 	}
+
+	//giving particular result for options
+
+	public String giveParticular(String str,String option){
+		switch(option){
+			case "-c" : return ""+getLength(str);
+			// default: getLine(str)+" "+ getWords(str)+" "+getLength(str);
+		}
+
+		return getLine(str) + " " + getWords(str) + " " + getLength(str);
+	}
 }
 

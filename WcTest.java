@@ -107,4 +107,11 @@ public class WcTest{
 	    assertEquals("1 10 48",wc.finalResult(text));	
 	}
 
+	@Test
+	public void giveParticular_will_give_the_result_of_that_option(){
+		String text = "hello, this is a good day.\r\nWhat do you think?\r\n";
+		Wc wc = new Wc();
+		assertEquals(wc.giveParticular(text, "-c"), "48");
+	}
+
 }
