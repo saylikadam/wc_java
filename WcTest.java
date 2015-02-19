@@ -107,6 +107,4 @@ public class WcTest{
 	    assertEquals("2 10 48",wc.finalResult());	
 	}
 
-	
-
 }

@@ -21,7 +21,6 @@ public class Wc{
 		return result;
 	}
 
-//line word character
 	public String finalResult(){
 		String output =  ""+getLine();
 		output = output +" "+getWords();
