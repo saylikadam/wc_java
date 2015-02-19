@@ -17,7 +17,7 @@ public class Wc{
 
 	public int getLine(){
 		if(this.text.length() == 0) return 0;
-		int result = this.text.split("\r\n").length -1;
+		int result = this.text.split("\r\n").length;
 		return result;
 	}
 
@@ -29,17 +29,10 @@ public class Wc{
 		return output;
 	}
 
-	//giving particular result for options
-
-	public String isOption(String option){
-		if(option != null){
-			switch(option){
-			case "-c" : return ""+getChars();
-			case "-l" : return ""+getLine();
-			case "-w" : return ""+getWords();
-			}	
-		}
-		return finalResult();
+	
+	public static String giveResult(String str){
+		Wc wcOutput = new Wc(str);
+		return wcOutput.finalResult();
 	}
 
 }
